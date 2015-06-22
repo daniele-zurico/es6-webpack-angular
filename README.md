@@ -1,16 +1,20 @@
 # portal-works prototype
 
-Full lazy loading in Angular JS using modules with support for shared controllers/directives and services as well.
-
 Run:
 
 - npm install
-- bower update
-- npm start
-- start feature/prototype backend
+- grunt
 
-Open browser and go to http://localhost:8080/app/public/#/
+Run Continuous Testing:
+
+- grunt test
+
+Build:
+
+- grunt build
+
+Open browser and go to http://localhost:7358/public/#/
 
 Notes: 
 
-Ongoing updates, still working on the tests...
+- grunt only starts the web server, you can run grunt and grunt test side by side if you want real time testing.
