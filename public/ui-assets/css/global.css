@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    margin: 0;
+    padding: 0pt;
+    overflow: hidden;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*********************/
+/* Toaster
+/*********************/
+
+.toast-bottom-right {
+    margin-bottom: 40px;
+}
+
+/*********************/
+/* Blocks
+/*********************/
+
+.sb-login {
+    width: 600px;
+    border: 1px solid #D5DEDC;
+    padding: 45px 30px 85px;
+    border-radius: 5px;
+    background: -webkit-radial-gradien(rgba(255,255,255,1), rgba(250,250,250,1), rgba(245,245,245,1), rgba(235,235,235,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(rgba(255,255,255,1), rgba(250,250,250,1), rgba(245,245,245,1), rgba(235,235,235,1)); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(rgba(255,255,255,1), rgba(250,250,250,1), rgba(245,245,245,1), rgba(235,235,235,1)); /* For Fx 3.6 to 15 */
+    background: radial-gradient(rgba(255,255,255,1), rgba(250,250,250,1), rgba(245,245,245,1), rgba(235,235,235,1)); /* Standard syntax (must be last) */
+}
+
+/*********************/
+/* Images
+/*********************/
+
+.sb-panasonic-logo {
+    height: 100px;
+    background-image: url("../img/panasonic-logo.png");
+    background-repeat: no-repeat;
+    background-size: 40%, 30%;
+    background-position: center 45%, center 75%;
+}
+
+.sb-panasonic-logo-small {
+    height: 30px;
+    width: 200px;
+    background-image: url("../img/panasonic-logo.png");
+    background-repeat: no-repeat;
+    background-size: 50%, 30%;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+/*********************/
+/* Borders
+/*********************/
+
+.top-border {
+    border-top: solid 1px #646464;
+}
+
+.sb-content-border {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+
+/*********************/
+/* Wrappers
+/*********************/
+
+.wrapper-div {
+    overflow: scroll;
+    height: calc(100% - 74px);
+    padding: 10px;
+}
+
+/*********************/
+/* Glyph
+/*********************/
+
+.glyphicon-refresh-animate {
+    -animation: spin 2s infinite linear;
+    -webkit-animation: spin2 2s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+.sb-glyph-spinner {
+    padding: 10px 16px;
+    font-size: 48px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #5c9fd3;
+}
+
+/*********************/
+/* Modal
+/*********************/
+
+.modal {
+    top: 15%;
+}
+
+#modal {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    position: relative;
+    background-color: #000000;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+
+.ta-editor.ta-html, .ta-scroll-window.form-control {
+    height: calc(100% - 128px) !important;
+    width: 313px;
+    overflow: auto;
+    font-family: inherit;
+    font-size: 100%;
+    margin-top: 5px;
+}
+
+.ta-scroll-window.form-control {
+    position: absolute;
+    padding: 0;
+}
+
+.ta-scroll-window > .ta-bind {
+    height: 100%;
+    min-height: 100px;
+    padding: 6px 12px;
+    outline: none;
+}
+
+.btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+    margin-left: 5px;
+    margin-top: 5px;
+    clear: both;
+}
+
+.ta-scroll-window > .ta-bind {
+    min-height: calc(100% - 100px);
+}
+
+.colorpicker {
+    background-color: #f8f8f8;
+    border: 1px solid gray;
+    margin-top: 2px;
+}
+
+.colorpicker .secondary {
+    margin-top: 5px;
+}
+
+.thumbnail_wrapper {
+    display:table-cell;
+    vertical-align:middle;
+}

@@ -1,0 +1,21 @@
+/*********************/
+/* Buttons
+/*********************/
+
+.sb-btn-primary {
+    color: #fff;
+    background-color: #569BBE;
+    border-color: #569BBE;
+}
+
+.sb-btn-primary:hover,
+.sb-btn-primary:focus,
+.sb-btn-primary:active,
+.sb-btn-primary.active,
+.open
+.dropdown-toggle
+.sb-btn-primary {
+    color: #fff;
+    background-color: #0067B1;
+    border-color: #0067B1;
+}

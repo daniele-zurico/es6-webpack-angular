@@ -1,0 +1,39 @@
+<div style="height: inherit;">
+    <nav class="navbar navbar-default navbar-fixed-top" style="z-index: 99999;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- TODO: Disable this link until navigation is allowed -->
+                <a ui-sref="top.dashboard" ng-class="{disabled: hc.enabled == false}"><img class="sb-navbar-logo" src="./ui-assets/img/sb-logo-web.png" ng-if="!hc.$state.includes('top.user.login')"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- site tree -->
+                <ul class="nav navbar-nav ng-hide" ng-show="hc.isLoggedIn == true">
+                    <li ng-class="{active: hc.$state.includes(tab.root), disabled: hc.enabled == false}" ng-repeat="tab in hc.mainNavData">
+                        <a href="" ng-click="hc.navigateTo(tab)">
+                            {{tab.label}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="nav2" id="sub-navigation-bar" role="navigation">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" ng-repeat="mainTab in hc.mainNavData" ng-show="hc.isLoggedIn == true">
+                <li ng-repeat="subTab in mainTab.children" ng-class="{active: hc.$state.includes(subTab.root), disabled: hc.enabled == false}">
+                    <a href="" ng-click="hc.navigateTo(subTab)">
+                        <span class="sb-subnav-align">{{subTab.label}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

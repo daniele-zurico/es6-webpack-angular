@@ -1,0 +1,5 @@
+<!-- content: wrapper container -->
+<section class="main hbox" id="layout-view" style="position: relative;" ng-class="{'layout-view-with-submenu': !$state.includes('top.dashboard')}">
+    <!-- content: dashboard ui-view -->
+    <div class="vbox allow-overlay fade-in-out" ui-view="dashboard" ng-show="$state.includes('top.dashboard')"></div>
+</section>

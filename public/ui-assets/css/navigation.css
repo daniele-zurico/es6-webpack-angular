@@ -1,0 +1,104 @@
+/*********************/
+/* Navigation
+/*********************/
+
+.sb-navbar-logo {
+    width: 152px;
+    position: relative;
+    top: 11px;
+    padding-right: 10px;
+}
+
+.sb-navbar-logo-developer {
+    width: 213px;
+    position: relative;
+    top: 13px;
+    padding-right: 10px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #80d4de;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555555;
+    background-color: #80d4de;
+}
+
+footer {
+    position: relative;
+    height: 50px;
+}
+
+.sb-header-align {
+    padding-top: 2px;
+}
+
+.sb-subnav-hide {
+    height: 0px;
+}
+
+.sb-footer {
+    /*position: relative;*/
+    min-height: 50px;
+    border: 1px solid transparent;
+    /*margin-bottom: -20px;*/
+    /*padding-top: 8px;*/
+    /*padding-right: 15px;*/
+}
+
+.nav2 {
+    height: 30px !important;
+    max-height: 35px !important;
+    background-color: black !important;
+    top: 49px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 99996;
+}
+
+.nav2 li {
+    margin-left: -5px;
+    height: 30px !important;
+}
+
+.sb-subnav-align {
+    height: 100% !important;
+}
+
+.nav2 li a {
+    height: 100% !important;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    color: whitesmoke;
+}
+
+.nav2 .navbar-nav > .active > a,
+.nav2 .navbar-nav > .active > a:active,
+.nav2 .navbar-nav > .active > a:focus {
+    height: 100% !important;
+    color: whitesmoke;
+    background-color: #149bdf;
+    text-align: center;
+}
+
+
+.nav2 .navbar-nav > .active > a:hover {
+    height: 100% !important;
+    color: whitesmoke;
+    background-color: #149bdf;
+}
+
+.nav2 .navbar-nav a:hover {
+    height: 100% !important;
+    color: black;
+    background-color: #149bdf;
+}

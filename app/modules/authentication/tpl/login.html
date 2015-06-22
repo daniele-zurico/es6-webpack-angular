@@ -1,0 +1,30 @@
+<!-- login view -->
+<div class="main hbox" style="background-color: rgba(86, 155, 190, 1); z-index: 9999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+    <div class="center-block">
+        <div class="sb-login" layout="column">
+            <div class="sb-panasonic-logo"></div>
+            <label class="h2 sb-blue">Login to your account</label>
+            <form name="userForm" ng-submit="doLogin(user)">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" ng-model="user.username" placeholder="User Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" ng-model="user.password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="acceptTerms" ng-model="user.termsAndConditions" required="You must agree to the terms and conditions.">
+                            I have read and agree to the Terms and Conditions
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <button type="submit" ng-disabled="myForm.$invalid" class="btn sb-btn-primary sb-float-right">LOGIN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
