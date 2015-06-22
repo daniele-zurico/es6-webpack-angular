@@ -13,7 +13,7 @@ export default class LoginBoxDirective extends Directive {
         this.controllerAs = 'login';
         this.scope = {
             doLogin: '='
-        }
+        };
     }
 
     link(scope, element, attrs) {

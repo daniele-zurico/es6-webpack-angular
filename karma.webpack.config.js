@@ -24,6 +24,8 @@ module.exports = {
         postLoaders: getPostLoaders()
     },
     resolve: resolve,
+    progress: true,
+    color: true,
     plugins: [
         new ModuleReplacementPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),

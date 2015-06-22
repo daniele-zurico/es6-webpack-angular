@@ -21,13 +21,13 @@ export default class UserLoginService {
                 // Resolve the / part of the path once the user is logged in
                 // We use timeout because it should not resolve before the promise
                 // is returned, so we resolve on the next frame.
-                this.$timeout(() => {d.resolve(user)});
+                this.$timeout(() => {d.resolve(user);});
             });
         } else {
             // User is already logged in.
             // We use timeout because it should not resolve before the promise
             // is returned, so we resolve on the next frame.
-            this.$timeout(() => {d.resolve(user)});
+            this.$timeout(() => {d.resolve(this.user.user);});
         }
 
         return d.promise;

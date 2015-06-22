@@ -11,7 +11,7 @@ export default class ViewportController extends EventListener {
 
         $rootScope.isLoggedIn = false;
 
-        $scope.handleLogin = (data) => { this.doLogin(data);}
+        $scope.handleLogin = (data) => { this.doLogin(data);};
     }
 
     /**

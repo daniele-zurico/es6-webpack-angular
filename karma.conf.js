@@ -19,7 +19,7 @@ module.exports = function(config) {
     config.set(
     {
         basePath: '',
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine-jquery', 'jasmine'],
         browsers: ['Chrome'],
         reporters: reporters,
         colors: true,
@@ -52,6 +52,7 @@ module.exports = function(config) {
             'istanbul-instrumenter-loader',
             'karma-webpack',
             'karma-jasmine-ajax',
+            'karma-jasmine-jquery',
             'karma-jasmine',
             'karma-phantomjs2-launcher',
             'karma-spec-reporter',

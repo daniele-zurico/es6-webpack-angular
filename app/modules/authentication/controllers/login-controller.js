@@ -5,7 +5,7 @@ import EventListener from 'event-listener';
  */
 /* @ngInject */
 export default class LoginController extends EventListener {
-    constructor($rootScope, toaster, User) {
+    constructor($rootScope, toaster) {
         super.info('Loaded');
     }
 }

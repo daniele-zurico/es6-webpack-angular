@@ -18,6 +18,8 @@ export default class RouteConfig {
                     // Setup your navigation paths here.
                     NavManager.registerMain('TOP LEVEL MENU', 'top.dashboard', 'top')
                         .sub('SUB LEVEL MENU', 'top.dashboard', 'top');
+
+                    return UserLogin.requireLogin();
                 }
             }
         });

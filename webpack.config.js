@@ -59,7 +59,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules|bower_components|vendor/,
-                loader: 'webpack-traceur?runtime=true&sourceMaps&experimental=true'
+                loader: 'webpack-traceur?runtime=true&sourceMaps&experimental=true!jshint'
             },
             {test: /[\/\\]angular.min\.js$/, loader: "exports?angular"},
             {test: /[\/\\]register\.js$/, loader: "exports?register"},
@@ -75,7 +75,14 @@ module.exports = {
         ],
         noParse: [
 
-        ]
+        ],
+        jshint: {
+            // Display JSHint messages as webpack errors
+            emitErrors: true,
+
+            // fail the build on JSHInt errors
+            failOnHint: false,
+        }
     },
 
     amd: { jQuery: true },

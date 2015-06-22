@@ -27,7 +27,7 @@ export default class RouteConfig {
             resolve: {
                 // Preload's content for the / part of the navigation route, also enforces authentication.
                 preLoad: function(UserLogin) {
-                    return UserLogin.requireLogin();
+
                 }
             }
         });
