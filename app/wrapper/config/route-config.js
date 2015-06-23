@@ -11,8 +11,9 @@ export default class RouteConfig {
         // this uses named views so the templates can be switched out easily
         $stateProvider.state('top', {
             url: '/',
-            sticky: true,
+            sticky: true, // Stops controllers reloading on navigation
             deepStateRedirect: true,
+            abstract: true, // Makes the view non navigable, will default to /dashboard
             views: {
                 'layout@': {
                     template: require('./../tpl/content-layout.html')
