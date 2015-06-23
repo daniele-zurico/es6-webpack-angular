@@ -1,4 +1,4 @@
-const moduleName = 'services';
+const moduleName = 'servicesModule';
 
 angular.module(moduleName, [])
 

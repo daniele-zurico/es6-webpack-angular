@@ -37,16 +37,16 @@ angular.module(moduleName, [
 // Content view layout
 .directive('appWrapper', () => { return new ViewportDirective(); })
 
+// NG Animate classes
+.animation('.fade-in-out', partialAnimation)
+
 // Run Phase
 .run(PluginRun)
 .run(RouteValidator)
 
 // Config Phase
 .config(PluginConfig)
-.config(RouteConfig)
-
-// NG Animate classes
-.animation('.fade-in-out', partialAnimation);
+.config(RouteConfig);
 
 /**
  * ng-hide animation using tween max instead of CSS, this is much more fluid and performant.

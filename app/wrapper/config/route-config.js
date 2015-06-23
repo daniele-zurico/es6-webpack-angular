@@ -15,10 +15,7 @@ export default class RouteConfig {
             deepStateRedirect: true,
             views: {
                 'layout@': {
-                    template: require('./../tpl/content-layout.html'),
-                    controller: function ($state, $scope) {
-                        $scope.$state = $state;
-                    }
+                    template: require('./../tpl/content-layout.html')
                 },
                 'header@': {
                     template: '<header-view></header-view>'

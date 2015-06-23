@@ -8,7 +8,7 @@ export default class RouteValidator {
 
         // TODO Handle state change errors cleanly.
         $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
-            console.error(error);
+
         });
 
         // Validates routes and redirects to login when needed.

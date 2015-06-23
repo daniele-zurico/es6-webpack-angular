@@ -1,4 +1,4 @@
-import RouteConfig from 'containers.dashboard.config.route-config';
+import RouteConfig from './config/route-config';
 
 let moduleName = 'dashboardModule';
 

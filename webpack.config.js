@@ -69,7 +69,7 @@ module.exports = {
             emitErrors: true,
 
             // fail the build on JSHInt errors
-            failOnHint: false,
+            failOnHint: false
         }
     },
 
@@ -97,7 +97,7 @@ module.exports = {
             'bootstrap': 'bootstrap/dist/js/bootstrap.min.js',
             'TweenMax': __dirname + '/vendor/greensock-js/src/minified/TweenMax.min.js',
             'TweenLite': __dirname + '/vendor/greensock-js/src/minified/TweenLite.min.js',
-            'lodash': 'underscore/underscore-min'
+            'lodash': 'underscore/underscore-min.js'
         },
         extensions: ['', '.js']
     },

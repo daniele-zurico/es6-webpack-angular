@@ -13,8 +13,8 @@ angular.element(document).ready(function() {
         'ui.router',
         'ui.bootstrap',
         // Common library
-        require('./common'),
-        // The container wrapper
+        require('./common/services'),
+        //// The container wrapper
         require('./wrapper')
     ]);
 });
