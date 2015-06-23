@@ -1,9 +1,9 @@
 <!-- login view -->
 <div class="main hbox" style="background-color: rgba(86, 155, 190, 1); z-index: 9999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
     <div class="center-block">
-        <div class="sb-login" layout="column">
-            <div class="sb-panasonic-logo"></div>
-            <label class="h2 sb-blue">Login to your account</label>
+        <div class="sk-login" layout="column">
+            <div class="sk-login-logo"></div>
+            <label class="h2 sk-blue">Login to your account</label>
             <form name="userForm" ng-submit="doLogin(user)">
                 <div class="form-group">
                     <input type="text" class="form-control" id="username" ng-model="user.username" placeholder="User Name" required>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <div>
-                        <button type="submit" ng-disabled="userForm.$invalid" id="login-button" class="btn sb-btn-primary sb-float-right">LOGIN</button>
+                        <button type="submit" ng-disabled="userForm.$invalid" id="login-button" class="btn sk-btn-primary sk-float-right">LOGIN</button>
                     </div>
                 </div>
             </form>

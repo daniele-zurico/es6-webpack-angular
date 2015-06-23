@@ -1,6 +1,8 @@
 import EventListener from 'event-listener';
 
 /**
+ * @author Wael Jammal
+ *
  * Represents a navigation state
  */
 /* @ngInject */
@@ -137,47 +139,15 @@ export default class NavManagerService extends EventListener {
     }
 
     /**
-     * In order to prevent the wizard popping up when using a url
-     * and it's the first time a user has opened the app we capture
-     * the supported params and store them to prevent the wizard from appearing.
+     * Use this to capture parameters that you want to persist
+     * across the entire site. You can use the Storage service
+     * to persist them.
      *
      * @param toState State that was requested
      * @param toParams The parameters of the requested state
      */
     captureDefaultParameters(toState, toParams) {
-        if(toParams) {
-            let did, pid, pageId;
 
-            if (this.storage.get('portal')) {
-                pid = this.storage.get('portal');
-            } else {
-                pid = -1;
-            }
-
-            if (this.storage.get('domain')) {
-                did = this.storage.get('domain');
-            } else {
-                did = -1;
-            }
-
-            if (this.storage.get('portal_' + pid)) {
-                pageId = this.storage.get('portal_' + pid);
-            } else {
-                pageId = -1;
-            }
-
-            if(toParams.aid && did === -1) {
-                this.storage.save('domain', toParams.aid);
-            }
-
-            if(toParams.pid && pid === -1) {
-                this.storage.save('portal', toParams.pid);
-            }
-
-            if(toParams.page && pageId === -1) {
-                this.storage.save('portal_' + toParams.pid, toParams.page);
-            }
-        }
     }
 }
 

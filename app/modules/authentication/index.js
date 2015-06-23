@@ -1,10 +1,22 @@
+/**
+ * @author Wael Jammal
+ *
+ * This is the main entry point for a module,
+ * you should declare your modules dependencies here
+ * and register your main directive.
+ *
+ * Importing your dependencies is important and saves
+ * time when unit testing, it also makes the module
+ * fully independent and reusable.
+ */
+
 import LoginBoxDirective from './directives/login-box';
 
 let moduleName = 'loginBoxModule';
 
-// Make sure module imports all it's own dependencies
+// Make sure your module imports all it's own dependencies
 // Remember they will not overlap, and only a single copy
-// of the module will be compiled no mater how many modules
+// of the dependency will be compiled no mater how many modules
 // you import them in.
 require('toaster');
 require('ngAnimate');

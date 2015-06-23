@@ -24,7 +24,7 @@
     margin-right: 10px;
 }
 
-.sb-main-margins {
+.sk-main-margins {
     margin: 10px;
 }
 
@@ -40,7 +40,7 @@
     bottom: 0px;
 }
 
-.sb-float-right {
+.sk-float-right {
     float: right;
 }
 
@@ -72,47 +72,8 @@
     margin-bottom: auto;
 }
 
-.sb-toolbar-margin {
-
-}
-
-.panel {
-    margin-bottom: 0px;
-}
-
-.sb-right-panel {
-    width: 300px;
-}
-
-.sb-right-panel .tab-content {
-    height: calc(100% - 73px);
-    position: absolute;
-    overflow: scroll;
-    width: 318px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.panel-heading span {
-    margin-top: -20px;
-    font-size: 15px;
-}
-
-#sb-container {
-    background-color: #004276;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    width: 100%;
-}
-
 .layout-view-with-submenu {
-    margin-top: 30px;
-}
-
-.panel-footer-h-fix {
-    max-height: 55px;
-    min-height: 55px;
+    margin-top: 40px;
 }
 
 /*********************/
@@ -124,29 +85,4 @@
     flex: 1;
     flex-direction: column;
     height: 100%;
-}
-
-.sb-content-flex {
-    flex: 10;
-    width: 100%;
-}
-
-#content-view .right-content-flex {
-    flex: 10;
-    border-radius: 3px;
-}
-
-#content-view .aside {
-    flex: 1;
-    min-width: 250px;
-    max-width: 250px;
-}
-
-.vbox-margin-fix {
-    margin-bottom: 10px;
-}
-
-.vbox-margin-fix-bottom {
-    margin-top: 10px;
-    margin-bottom: 0px;
 }

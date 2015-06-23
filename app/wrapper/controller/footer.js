@@ -2,12 +2,13 @@ import EventListener from 'event-listener';
 
 /* @ngInject */
 export default class FooterController extends EventListener {
-    constructor(User, toaster) {
+    constructor(User, toaster, $rootScope) {
         super();
         super.info('Loaded');
 
         this.user = User;
         this.toaster = toaster;
+        this.$rootScope = $rootScope;
     }
 
     /**
@@ -18,7 +19,9 @@ export default class FooterController extends EventListener {
     }
 
     logout() {
-        this.toaster.pop('error', 'Not Implemented', 'Logout is not currently implemented.');
+        this.user.logout();
+        this.$rootScope.isLoggedIn = false;
+        this.toaster.pop('success', 'Logged out', 'Thank you for visiting.');
     }
 }
 

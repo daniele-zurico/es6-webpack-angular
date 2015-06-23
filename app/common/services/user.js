@@ -5,7 +5,7 @@ import EventListener from 'event-listener';
  */
 /* @ngInject */
 export default class UserService extends EventListener {
-    constructor($resource, $q, $http, MsgBus, Storage) {
+    constructor($resource, $q, $http, $timeout, MsgBus, Storage) {
         super.info('Loaded');
 
         super();
@@ -16,6 +16,7 @@ export default class UserService extends EventListener {
         this.bus = MsgBus;
         this.storage = Storage;
         this._user = undefined;
+        this.$timeout = $timeout;
 
         this.User = $resource('/user', {},
             { 'login': { method: 'POST', url: '/user/login' } }
@@ -41,6 +42,10 @@ export default class UserService extends EventListener {
         return this._user;
     }
 
+    logout() {
+        this._loggedIn = false;
+    }
+
     /**
      * Calls the /user/login resource.
      *
@@ -50,20 +55,26 @@ export default class UserService extends EventListener {
      */
     login(username, password, emit) {
         var d = this.$q.defer();
-        var p = this.User.login({userName: username, userPassword: password}).$promise;
 
-        p.then((user) => {
-            d.resolve(user);
-            this.$http.defaults.headers.common['X-Auth-Token'] = user.token;
-            this.storage.save('token', user.token);
+        this.$timeout(() => {
             this._loggedIn = true;
+            this._user = {
+                'token' : 'your-token-here',
+                'user' : {
+                    'id': 1,
+                    'userName': username,
+                    'firstName': username,
+                    'lastName': username
+                }
+            };
 
             if(emit) {
-                this.emitLoggedInMsg(user);
+                this.emitLoggedInMsg(this._user);
             }
 
-            this._user = user.user;
-        });
+            d.resolve(this._user);
+
+        }, 1000);
 
         return d.promise;
     }

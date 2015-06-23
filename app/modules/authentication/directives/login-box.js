@@ -9,8 +9,6 @@ export default class LoginBoxDirective extends Directive {
         this.restrict = 'AE';
         this.transclude = false;
         this.replace = false;
-        this.controller = require('../controllers/login-controller');
-        this.controllerAs = 'login';
         this.scope = {
             doLogin: '='
         };

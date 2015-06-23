@@ -20,10 +20,12 @@ module.exports = function(config) {
     {
         basePath: '',
         frameworks: ['jasmine-jquery', 'jasmine'],
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS2', 'Chrome'],
         reporters: reporters,
         colors: true,
         files: [
+            './bower_components/angular/angular.min.js',
+            './bower_components/angular-mocks/angular-mocks.js',
             scan
         ],
 

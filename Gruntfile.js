@@ -78,30 +78,14 @@ module.exports = function(grunt) {
         copy: {
             target: {
                 files: [
+                    // Skeleton uses require for HTML so no need to copy them, however uncomment this if you want to
                     //{cwd: 'app/modules', expand: true, src: '**/*.html', dest: 'target/modules/'},
                     {cwd: 'public/ui-assets/fonts', expand: true, src: '**/*', dest: 'target/ui-assets/fonts'},
                     {cwd: 'public/ui-assets/fonts', expand: true, src: '**/*', dest: 'target/fonts'},
                     {cwd: 'public/ui-assets/css/bootstrap/fonts', expand: true, src: '**/*', dest: 'target/ui-assets/fonts'},
                     {cwd: 'public/ui-assets/img', expand: true, src: '**/*', dest: 'target/ui-assets/img'},
                     {cwd: 'public', expand: true, src: '**/*.html', dest: 'target/'},
-                    {cwd: 'public/scripts', expand: true, src: '**/*.js', dest: 'target/scripts'},
-
-                    // Fancy tree deps
-                    {
-                        cwd: 'bower_components/fancytree/dist/skin-themeroller',
-                        expand: true,
-                        src: '**/*.gif',
-                        dest: 'target/ui-assets/css'
-                    },
-
-                    // Ace deps
-                    {cwd: 'bower_components/ace-builds/src-min-noconflict', expand: true, src: '**/theme-*', dest: 'target/bower_components/ace-builds/src-min-noconflict'},
-                    {cwd: 'bower_components/ace-builds/src-min-noconflict', expand: true, src: '**/mode-*', dest: 'target/bower_components/ace-builds/src-min-noconflict'},
-                    {cwd: 'bower_components/ace-builds/src-min-noconflict', expand: true, src: '**/worker-*', dest: 'target/bower_components/ace-builds/src-min-noconflict'},
-                    {cwd: 'bower_components/ace-builds/src-min-noconflict/snippets', expand: true, src: '**/*', dest: 'target/bower_components/ace-builds/src-min-noconflict/snippets'},
-
-                    // Zero clipboard
-                    {cwd: 'bower_components/zeroclipboard', expand: true, src: '**/*.swf', dest: 'target/bower_components/zeroclipboard'}
+                    {cwd: 'public/scripts', expand: true, src: '**/*.js', dest: 'target/scripts'}
                 ]
             }
         },
@@ -131,7 +115,16 @@ module.exports = function(grunt) {
 
         karma: {
             unit: {
-                configFile: 'karma.conf.js'
+                configFile: 'karma.conf.js',
+                singleRun: false,
+                browsers: ['PhantomJS2', 'Chrome'],
+                logLevel: 'INFO'
+            },
+            build: {
+                configFile: 'karma.conf.js',
+                singleRun: true,
+                browsers: ['PhantomJS2'],
+                logLevel: 'INFO'
             }
         }
     });
@@ -144,7 +137,7 @@ module.exports = function(grunt) {
     grunt.registerTask("test", ["karma:unit"]);
 
     // Production build
-    grunt.registerTask("build", ["clean", "webpack:build", "copy", "cssmin", "uglify"])
+    grunt.registerTask("build", ["clean", "karma:build", "webpack:build", "copy", "cssmin", "uglify"])
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');

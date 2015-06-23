@@ -1,5 +1,6 @@
 import Directive from 'directive';
 
+
 /* @ngInject */
 export default class FooterDirective extends Directive {
     constructor() {

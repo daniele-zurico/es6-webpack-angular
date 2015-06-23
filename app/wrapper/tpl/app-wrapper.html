@@ -1,17 +1,15 @@
 <!-- content: auth container -->
-<!-- This component is a special case, it needs to be available even if a route has paused! -->
-<!-- TODO: Attempt to make this work from within the main wrapper -->
 <section class="center-block fade-in-out" ng-show="isLoggedIn == false" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
     <login-box class="main vbox" do-login="handleLogin"></login-box>
 </section>
 
 <!-- content -->
-<div class="vbox viewport">
+<div class="vbox viewport fade-in-out" ng-show="isLoggedIn == true">
     <!-- content: header ui-view -->
     <header ui-view="header"></header>
 
     <!-- content: main ui-view -->
-    <section class="main hbox sb-main-margins" id="content-view">
+    <section class="main hbox sk-main-margins layout-view-with-submenu" id="content-view">
         <div ui-view="layout" class="main hbox"></div>
     </section>
 
@@ -20,7 +18,8 @@
 </div>
 <!-- /content -->
 
-<toaster-container
+<!-- toaster -->
+<toaster-container style="z-index: 9999999;"
         toaster-options="{
                     'closeButton': true,
                     'debug': false,

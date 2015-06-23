@@ -21,23 +21,11 @@ module.exports = {
             'ngAnimate',
             'ngResource',
             'ui-bootstrap-tpls',
-            'api-check',
             'jquery',
             'bootstrap',
             'jQueryUi',
-            'fancytree',
             'angular-ui-router-extras',
-            'script!ace-editor',
-            'script!TweenMax',
-            'text-angular',
-            'text-angular-rangy',
-            'text-angular-sanitize',
-            'angular-foundation-colorpicker',
-            'script!flexslider',
-            'angular-flexslider',
-            'script!zeroclipboard',
-            'ng-clip',
-            'script!moment'
+            'script!TweenMax'
         ]
     },
     externals: {
@@ -107,20 +95,8 @@ module.exports = {
             'ngResource': 'angular-resource/angular-resource.min.js',
             'ui-bootstrap-tpls': 'angular-bootstrap/ui-bootstrap-tpls.min.js',
             'bootstrap': 'bootstrap/dist/js/bootstrap.min.js',
-            'fancytree': 'fancytree/dist/jquery.fancytree-all.min.js',
-            'ace-editor': 'ace-builds/src-min-noconflict/ace.js',
-            'text-angular': 'textAngular/dist/textAngular.min.js',
-            'text-angular-rangy': 'textAngular/dist/textAngular-rangy.min.js',
-            'text-angular-sanitize': 'textAngular/dist/textAngular-sanitize.min.js',
             'TweenMax': __dirname + '/vendor/greensock-js/src/minified/TweenMax.min.js',
             'TweenLite': __dirname + '/vendor/greensock-js/src/minified/TweenLite.min.js',
-            'angular-foundation-colorpicker': 'angular-foundation-colorpicker/js/foundation-colorpicker-module.js',
-            'flexslider': 'flexslider/jquery.flexslider.js',
-            'angular-flexslider': __dirname + '/vendor/angular-flexslider/angular-flexslider.js',
-            'zeroclipboard': 'zeroclipboard/dist/ZeroClipboard.min.js',
-            'ng-clip': 'ng-clip/dest/ng-clip.min.js',
-            'moment': 'moment/min/moment.min.js',
-            'ace': 'ace-builds/src-min-noconflict',
             'lodash': 'underscore/underscore-min'
         },
         extensions: ['', '.js']
@@ -135,7 +111,6 @@ module.exports = {
         ),
         new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
         new webpack.ProvidePlugin({
-            ace: "ace",
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery",

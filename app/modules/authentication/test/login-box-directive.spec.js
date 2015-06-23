@@ -1,7 +1,7 @@
 describe('Test User Login Box Directive', function() {
     var element, scope;
 
-    // Module name we are testing
+    // Module we are testing
     beforeEach(angular.mock.module('loginBoxModule'));
 
     // Use inject to compile the directive so we can test it

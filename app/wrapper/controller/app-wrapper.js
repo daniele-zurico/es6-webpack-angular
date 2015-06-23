@@ -28,7 +28,6 @@ export default class ViewportController extends EventListener {
         }
         value = cookieName + '=' + encodeURIComponent(cookieValue) + '; max-age=' + 60 * 60 * 24 * lifespanInDays;
         document.cookie = value + '; path=/app/';
-        document.cookie = value + '; path=/accounts/';
     }
 
     /**
@@ -37,7 +36,7 @@ export default class ViewportController extends EventListener {
      * @param data
      */
     handleLoggedIn(data) {
-        this.setCookie('SiteBuilder', data.token);
+        this.setCookie('MySitesCookie', data.token);
 
         this.toaster.pop(
             'success', 'Logged In', 'Welcome ' +

@@ -15,7 +15,10 @@ export default class RouteConfig {
             deepStateRedirect: true,
             views: {
                 'layout@': {
-                    template: require('./../tpl/content-layout.html')
+                    template: require('./../tpl/content-layout.html'),
+                    controller: function ($state, $scope) {
+                        $scope.$state = $state;
+                    }
                 },
                 'header@': {
                     template: '<header-view></header-view>'
@@ -26,8 +29,10 @@ export default class RouteConfig {
             },
             resolve: {
                 // Preload's content for the / part of the navigation route, also enforces authentication.
-                preLoad: function(UserLogin) {
-
+                preLoad: function(NavManager) {
+                    // Setup your navigation paths here.
+                    NavManager.registerMain('TOP LEVEL MENU', 'top.dashboard', 'top')
+                        .sub('SUB LEVEL MENU', 'top.dashboard', 'top');
                 }
             }
         });

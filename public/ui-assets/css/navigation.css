@@ -2,10 +2,10 @@
 /* Navigation
 /*********************/
 
-.sb-navbar-logo {
+.sk-navbar-logo {
     width: 152px;
     position: relative;
-    top: 11px;
+    top: 13px;
     padding-right: 10px;
 }
 
@@ -41,7 +41,7 @@ footer {
     height: 0px;
 }
 
-.sb-footer {
+.sk-footer {
     /*position: relative;*/
     min-height: 50px;
     border: 1px solid transparent;
@@ -70,7 +70,7 @@ footer {
     height: 30px !important;
 }
 
-.sb-subnav-align {
+.sk-subnav-align {
     height: 100% !important;
 }
 

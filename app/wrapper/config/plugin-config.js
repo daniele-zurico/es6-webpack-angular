@@ -3,15 +3,8 @@
  */
 /* @ngInject */
 export default class PluginConfig {
-    constructor(ngClipProvider) {
-        let document = window.document;
+    constructor() {
 
-        // Copy to clipboard plugin
-        if(document.domain === 'localhost') {
-            ngClipProvider.setPath('../bower_components/zeroclipboard/dist/ZeroClipboard.swf');
-        } else {
-            ngClipProvider.setPath('bower_components/zeroclipboard/dist/ZeroClipboard.swf');
-        }
     }
 }
 

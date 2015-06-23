@@ -13,12 +13,8 @@ export default class RouteConfig {
                 }
             },
             resolve: {
-                // Preload's content for the / part of the navigation route, also enforces authentication.
-                checkAuth: function(UserLogin, NavManager) {
-                    // Setup your navigation paths here.
-                    NavManager.registerMain('TOP LEVEL MENU', 'top.dashboard', 'top')
-                        .sub('SUB LEVEL MENU', 'top.dashboard', 'top');
-
+                // Set up dashboard entry point
+                setupDashboard: function(UserLogin, preLoad) {
                     return UserLogin.requireLogin();
                 }
             }
