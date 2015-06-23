@@ -14,7 +14,7 @@ angular.element(document).ready(function() {
         'ui.bootstrap',
         // Common library
         require('./common/services'),
-        //// The container wrapper
+        // The container wrapper
         require('./wrapper')
     ]);
 });
