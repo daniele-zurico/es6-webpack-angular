@@ -10,5 +10,3 @@ let bootstrap = new Bootstrap();
 bootstrap
     .add(require('../test/mock/index'))
     .start();
-
-console.log("MOCKS");
