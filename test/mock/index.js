@@ -1,4 +1,4 @@
-// Reads in all the unit tests
+// Reads in all the mocks
 let moduleName = 'mocks';
 
 angular.module(moduleName, []);

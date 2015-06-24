@@ -11,5 +11,3 @@ import Bootstrap from './common/globals/bootstrap';
 // Global dependencies bootstrap
 let bootstrap = new Bootstrap();
 bootstrap.start();
-
-console.log("NO MOCKS");

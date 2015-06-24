@@ -13,7 +13,7 @@ angular.module('user-mocks', ['ngMockE2E'])
                 'password': 'admin'
             }
         };
-        console.log('MOCK LOADED');
+
         $httpBackend.whenPOST('/user/login').respond(200, user);
     });
 
