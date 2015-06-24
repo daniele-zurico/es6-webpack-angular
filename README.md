@@ -5,10 +5,6 @@ Run:
 - npm install
 - grunt
 
-Run Continuous Testing:
-
-- grunt test
-
 Build:
 
 - grunt build
@@ -17,7 +13,8 @@ Open browser and go to http://localhost:7358/public/#/
 
 Notes: 
 
-- grunt only starts the web server, you can run grunt and grunt test side by side if you want real time testing.
+The grunt default task will start up a webserver on port 7358 and another server running mocks on 7359, it will also
+spawn the karma server for continuous testing.
 
 Usage & Design:
 
