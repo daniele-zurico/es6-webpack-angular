@@ -45,6 +45,18 @@ module.exports = function(grunt) {
                     devtool: "source-map",
                     debug: true
                 }
+            },
+            mock: {
+                keepAlive: true,
+                port: 7359,
+                webpack: {
+                    devtool: "source-map",
+                    debug: true,
+                    entry: {
+                        app: './index-mock.js',
+                        vendor: webpackConfig.entry.vendor
+                    }
+                }
             }
         },
 
@@ -126,15 +138,21 @@ module.exports = function(grunt) {
                 browsers: ['PhantomJS2'],
                 logLevel: 'INFO'
             }
+        },
+
+        parallel: {
+            dev: {
+                options: {
+                    stream: true,
+                    grunt: true
+                },
+                tasks: ["webpack-dev-server:start", "webpack-dev-server:mock", "karma:unit"]
+            }
         }
     });
 
-    // Development
-    grunt.registerTask("default", ["webpack-dev-server:start"]);
-
-    // Build and watch cycle (another option for development)
-    // Advantage: No server required, can run app from filesystem
-    grunt.registerTask("test", ["karma:unit"]);
+    // Development runs mocks / live + untit tests
+    grunt.registerTask("default", ["parallel"]);
 
     // Production build
     grunt.registerTask("build", ["clean", "karma:build", "webpack:build", "copy", "cssmin", "uglify"])
@@ -144,4 +162,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-parallel');
 };

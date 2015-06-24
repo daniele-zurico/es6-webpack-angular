@@ -41,6 +41,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-karma": "^0.11.0",
     "grunt-node-webkit-builder": "^1.0.2",
+    "grunt-parallel": "^0.4.1",
     "grunt-webpack": "^1.0.8",
     "handlebars-loader": "^0.1.8",
     "html-loader": "^0.3.0",

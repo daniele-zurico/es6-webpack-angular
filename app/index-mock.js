@@ -3,13 +3,12 @@
  *
  * The main entry point for the app.
  */
-
-const angular = require('angular');
-
 import Bootstrap from './common/globals/bootstrap';
 
 // Global dependencies bootstrap
 let bootstrap = new Bootstrap();
-bootstrap.start();
+bootstrap
+    .add(require('../test/mock/index'))
+    .start();
 
-console.log("NO MOCKS");
+console.log("MOCKS");

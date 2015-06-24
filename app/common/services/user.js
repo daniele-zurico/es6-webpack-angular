@@ -55,26 +55,18 @@ export default class UserService extends EventListener {
      */
     login(username, password, emit) {
         var d = this.$q.defer();
+        var p = this.User.login({userName: username, userPassword: password}).$promise;
 
-        this.$timeout(() => {
+        p.then((user) => {
+            d.resolve(user);
             this._loggedIn = true;
-            this._user = {
-                'token' : 'your-token-here',
-                'user' : {
-                    'id': 1,
-                    'userName': username,
-                    'firstName': username,
-                    'lastName': username
-                }
-            };
 
             if(emit) {
-                this.emitLoggedInMsg(this._user);
+                this.emitLoggedInMsg(user);
             }
 
-            d.resolve(this._user);
-
-        }, 1000);
+            this._user = user.user;
+        });
 
         return d.promise;
     }
