@@ -3,6 +3,9 @@
  */
 /* @ngInject */
 export default class PluginRun {
+    /**
+     * @param toaster Toaster instance
+     */
     constructor(toaster) {
         toaster.options = {
             'closeButton': true,

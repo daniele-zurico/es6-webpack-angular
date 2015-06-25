@@ -1,5 +1,8 @@
 import EventListener from 'event-listener';
 
+/**
+ * The global footer controller for the site.
+ */
 /* @ngInject */
 export default class FooterController extends EventListener {
     constructor(User, toaster, $rootScope) {
@@ -18,6 +21,9 @@ export default class FooterController extends EventListener {
         return this.user.loggedIn;
     }
 
+    /**
+     * Logs the user out.
+     */
     logout() {
         this.user.logout();
         this.$rootScope.isLoggedIn = false;

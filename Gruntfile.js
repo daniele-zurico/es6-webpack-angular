@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     var webpack = require("webpack");
     var webpackConfig = require("./webpack.config.js");
     var karma = require('karma');
+    var esdoc = require('esdoc');
 
     grunt.initConfig({
         webpack: {
@@ -148,14 +149,21 @@ module.exports = function(grunt) {
                 },
                 tasks: ["webpack-dev-server:start", "webpack-dev-server:mock", "karma:unit"]
             }
+        },
+        exec: {
+            docs: {
+                cmd: 'esdoc -c esdoc.json',
+                stderr: false
+            }
         }
     });
 
     // Development runs mocks / live + untit tests
     grunt.registerTask("default", ["parallel"]);
+    grunt.registerTask("docs", ["exec:docs"]);
 
     // Production build
-    grunt.registerTask("build", ["clean", "karma:build", "webpack:build", "copy", "cssmin", "uglify"])
+    grunt.registerTask("build", ["clean", "karma:build", "webpack:build", "copy", "docs", "cssmin", "uglify"]);
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');

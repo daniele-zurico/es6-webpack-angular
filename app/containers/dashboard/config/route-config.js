@@ -1,5 +1,12 @@
-/* @ngInject */
+/**
+ * Route configuration for the dashboard glue container.
+ */
 export default class RouteConfig {
+    /**
+     * Sets up the routes.
+     *
+     * @param $stateProvider
+     */
     constructor($stateProvider) {
         $stateProvider.state('top.dashboard', {
             url: 'dashboard',

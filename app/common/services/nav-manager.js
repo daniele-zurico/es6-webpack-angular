@@ -1,8 +1,6 @@
 import EventListener from 'event-listener';
 
 /**
- * @author Wael Jammal
- *
  * Represents a navigation state
  */
 /* @ngInject */
@@ -15,6 +13,11 @@ export class NavItem {
         this.currentRoute = undefined;
     }
 
+    /**
+     * The children of this navigation item.
+     *
+     * @returns {Array<NavItem>}
+     */
     get children() {
         return this._children;
     }
@@ -22,9 +25,9 @@ export class NavItem {
     /**
      * Adds a child to this nav item
      *
-     * @param label Label to display
-     * @param path Path to navigate to
-     * @returns {NavItem} This
+     * @param {string} label Label to display
+     * @param {string} path Path to navigate to
+     * @returns {NavItem} Self
      */
     sub(label, path, root) {
         let entry = new NavItem(label, path, root);
@@ -38,62 +41,105 @@ export class NavItem {
  * Provides utilities for managing navigation state and remembering parameters.
  */
 export default class NavManagerService extends EventListener {
+    /**
+     * Sets up default paramater values
+     *
+     * @param {Object} $rootScope
+     * @param {Storage} Storage
+     */
     constructor($rootScope, Storage) {
         super();
-        super.info('Loaded');
 
+        /** @private **/
         this.storage = Storage;
+        /** @private **/
         this._mainNav = [];
+        /** @private **/
         this.params = {};
+        /** @private **/
         this._mainNavVisible = false;
+        /** @private **/
         this._subNavVisible = false;
+        /** @private **/
         this._enabled = true;
-
+        /** @private **/
         this.$rootScope = $rootScope;
     }
 
-    set showSetupWizard(value) {
-        this.$rootScope.showSetupWizard = value;
-    }
-
-    get showSetupWizard() {
-        return this.$rootScope.showSetupWizard;
-    }
-
+    /**
+     * Sets the logged in status on the root scope.
+     *
+     * @param {boolean} value True/False logged in state
+     */
     set isLoggedIn(value) {
         this.$rootScope.isLoggedIn = value;
     }
 
+    /**
+     * Returns the current logged in state.
+     *
+     * @returns {boolean}
+     */
     get isLoggedIn() {
         return this.$rootScope.isLoggedIn;
     }
 
+    /**
+     * Shows or hides the main navigation.
+     *
+     * @param {boolean} value
+     */
     set mainNavVisible(value) {
         this._mainNavVisible = value;
     }
 
+    /**
+     * Returns the state of the main navigation
+     *
+     * @returns {boolean}
+     */
     get mainNavVisible() {
         return this._mainNavVisible;
     }
 
+    /**
+     * Shows or hides the sub navigation
+     *
+     * @param {boolean} value
+     */
     set subNavVisible(value) {
         this._subNavVisible = value;
     }
 
+    /**
+     * Returns the state of the sub navigation.
+     *
+     * @returns {boolean}
+     */
     get subNavVisible() {
         return this._subNavVisible;
     }
 
-    get enabled() {
-        return this._enabled;
-    }
-
+    /**
+     * Set to true to enable navigation.
+     *
+     * @param {boolean} value
+     */
     set enabled(value) {
         this._enabled = value;
     }
 
     /**
-     * @returns {Array} Main navigation data
+     * Returns true if navigation is enabled.
+     *
+     * @returns {boolean}
+     */
+    get enabled() {
+        return this._enabled;
+    }
+
+    /**
+     * @returns {Array<NavItem>} Main navigation data
      */
     get mainNav() {
         return this._mainNav;
@@ -102,16 +148,16 @@ export default class NavManagerService extends EventListener {
     /**
      * Updates the last parameters for the given state
      *
-     * @param state State to update
-     * @param params New parameters
+     * @param {string} state State to update
+     * @param {Object} params New parameters
      */
     updateParams(state, params) {
         this.params[state] = params;
     }
 
     /**
-     * @param state State to get current parameters for
-     * @returns {*} Parameters
+     * @param {Object} state State to get current parameters for
+     * @returns {Object} Parameters
      */
     getParams(state) {
         return this.params[state];
@@ -143,8 +189,8 @@ export default class NavManagerService extends EventListener {
      * across the entire site. You can use the Storage service
      * to persist them.
      *
-     * @param toState State that was requested
-     * @param toParams The parameters of the requested state
+     * @param {string} toState State that was requested
+     * @param {Object} toParams The parameters of the requested state
      */
     captureDefaultParameters(toState, toParams) {
 

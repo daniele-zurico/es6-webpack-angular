@@ -1,0 +1,7 @@
+{
+  "source": "./app",
+  "destination": "./target/docs",
+  "autoPrivate": true,
+  "scripts": ["./vendor/doc-menu.js", "./bower_components/jquery/dist/jquery.min.js"],
+  "styles": ["./vendor/doc-style.css"]
+}

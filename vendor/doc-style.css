@@ -1,0 +1,28 @@
+#navcontainer ul
+{
+    margin: 0;
+    padding-left: 5px;
+    list-style-type: none;
+}
+
+#navcontainer a
+{
+    display: block;
+    width: 9em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navcontainer a:hover
+{
+
+}
+
+#navcontainer li li a
+{
+    display: block;
+    width: 9em;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    font-weight: normal;
+}

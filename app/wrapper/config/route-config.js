@@ -1,5 +1,14 @@
-/* @ngInject */
+/**
+ * Configures routes for the wrapper.
+ */
 export default class RouteConfig {
+    /**
+     * Sets up the routes.
+     *
+     * @param $stateProvider Current state provider
+     * @param $urlRouterProvider Url route provider
+     * @param $stickyStateProvider Stick state provider
+     */
     constructor($stateProvider, $urlRouterProvider, $stickyStateProvider) {
         // Enable to turn on state debugging
         //$stickyStateProvider.enableDebug(true);

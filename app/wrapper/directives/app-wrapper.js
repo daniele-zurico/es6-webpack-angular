@@ -1,5 +1,8 @@
 import Directive from 'directive';
 
+/**
+ * Application wrapper directive, renders the main viewport.
+ */
 /* @ngInject */
 export default class ViewportDirective extends Directive {
     constructor() {

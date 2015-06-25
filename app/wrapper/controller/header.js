@@ -1,5 +1,8 @@
 import EventListener from 'event-listener';
 
+/**
+ * Global header controller for the site.
+ */
 /* @ngInject */
 export default class HeaderController extends EventListener {
     constructor($state, $timeout, toaster, NavManager, User) {
@@ -11,14 +14,23 @@ export default class HeaderController extends EventListener {
         this.$state = $state;
     }
 
+    /**
+     * @returns {boolean} True if navigation is enabled
+     */
     get enabled() {
         return this.nav.enabled;
     }
 
+    /**
+     * @returns {boolean} True if main navigation is visible
+     */
     get mainNavVisible() {
         return this.nav.mainNavVisible;
     }
 
+    /**
+     * @returns {boolean} True if sub navigation is visible
+     */
     get subNavVisible() {
         return this.nav.subNavVisible;
     }

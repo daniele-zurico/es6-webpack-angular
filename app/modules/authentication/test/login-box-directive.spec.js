@@ -1,3 +1,6 @@
+/**
+ * @test {LoginBoxDirective}
+ */
 describe('Test User Login Box Directive', function() {
     var element, scope;
 
@@ -14,7 +17,9 @@ describe('Test User Login Box Directive', function() {
         scope.$digest();
     }));
 
-    // Tests
+    /**
+     * @test {LoginBoxDirective#scope}
+     */
     it('Login button should be disabled by default', function() {
         let button = $(element.find('#login-button'));
         expect(button.eq(0)).toHaveAttr('disabled', 'disabled');

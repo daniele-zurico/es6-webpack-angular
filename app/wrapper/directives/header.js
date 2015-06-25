@@ -1,5 +1,8 @@
 import Directive from 'directive';
 
+/**
+ * Header directive renders the header.
+ */
 /* @ngInject */
 export default class HeaderDirective extends Directive {
     constructor() {

@@ -1,7 +1,18 @@
 import EventListener from 'event-listener';
 
+/**
+ * The main view port for the app, handles authentication as well.
+ */
 /* @ngInject */
 export default class ViewportController extends EventListener {
+    /**
+     * Injects dependencies.
+     *
+     * @param $rootScope Root scope
+     * @param toaster Toaster
+     * @param {UserService} User User Service
+     * @param $scope Scope
+     */
     constructor($rootScope, toaster, User, $scope) {
         super.info('Loaded');
 
@@ -50,7 +61,7 @@ export default class ViewportController extends EventListener {
     /**
      * Handles login.
      *
-     * @param user
+     * @param {Object} user
      */
     doLogin(user) {
         this.userService.login(user.username, user.password, false)
