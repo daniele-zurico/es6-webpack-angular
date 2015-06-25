@@ -23,6 +23,39 @@
     display: block;
     width: 9em;
     text-decoration: none;
-    border-bottom: 1px solid #fff;
     font-weight: normal;
+}
+
+.content {
+    margin-top: 40px;
+    margin-left: 343px;
+    padding: 10px 50px 10px 20px;
+}
+
+.navigation {
+    position: fixed;
+    top: 42px;
+    left: 0;
+    box-sizing: border-box;
+    width: 324px;
+    height: 100%;
+    padding-top: 0;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    overflow-x: scroll;
+    box-shadow: rgba(255, 255, 255, 1) -1px 0 0 inset;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer, .file-footer {
+    text-align: right;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 13px;
+    margin-right: 50px;
+    margin-left: 364px;
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+    margin-top: 20px;
+    padding-bottom: 10px;
 }

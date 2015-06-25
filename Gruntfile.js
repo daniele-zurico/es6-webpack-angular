@@ -150,6 +150,7 @@ module.exports = function(grunt) {
                 tasks: ["webpack-dev-server:start", "webpack-dev-server:mock", "karma:unit"]
             }
         },
+
         exec: {
             docs: {
                 cmd: 'esdoc -c esdoc.json',
@@ -160,6 +161,8 @@ module.exports = function(grunt) {
 
     // Development runs mocks / live + untit tests
     grunt.registerTask("default", ["parallel"]);
+
+    // Docs
     grunt.registerTask("docs", ["exec:docs"]);
 
     // Production build
