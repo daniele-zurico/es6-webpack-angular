@@ -3,10 +3,6 @@
 @import url("./font-awesome/font.css");
 @import url("./bootstrap/css/bootstrap.css");
 @import url("../../../bower_components/angularjs-toaster/toaster.css");
-@import url("../../../bower_components/fancytree/dist/skin-themeroller/ui.fancytree.css");
-@import url("../../../bower_components/textAngular/src/textAngular.css");
-@import url("../../../bower_components/angular-foundation-colorpicker/css/colorpicker.css");
-@import url("../../../bower_components/flexslider/flexslider.css");
 
 @import url("./layout.css");
 @import url("./bootstap-theme.css");

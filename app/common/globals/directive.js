@@ -10,7 +10,6 @@ export default class Directive extends BaseClass {
      * Calls base constructor.
      */
     constructor() {
-        base();
     }
 
     /**

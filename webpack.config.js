@@ -83,7 +83,6 @@ module.exports = {
         ],
         alias: {
             'directive': __dirname + "/app/common/globals/directive.js",
-            'event-listener': __dirname + "/app/common/globals/event-listener.js",
             'jquery': 'jquery/dist/jquery.js',
             'jQueryUi': 'jquery-ui/jquery-ui.min.js',
             'angular': 'angular/angular.min.js',

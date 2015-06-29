@@ -1,15 +1,21 @@
 # portal-works prototype
 
-Run:
+Install:
+ - npm install
+ - npm install -g esdoc
 
-- npm install
-- grunt
+Run:
+- grunt 
+it execute in developer mode. It run continuous test integration and webpack server
+Open browser and go to http://localhost:7358/public/#/
 
 Build:
 
 - grunt build
+release build. Ready for deploy into a server
 
-Open browser and go to http://localhost:7358/public/#/
+- grunt docs 
+to generate documentation (it's stored under /target/docs)
 
 Notes: 
 

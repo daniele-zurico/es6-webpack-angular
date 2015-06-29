@@ -1,14 +1,9 @@
-import EventListener from 'event-listener';
-
 /**
  * User Services.
  */
 /* @ngInject */
-export default class UserService extends EventListener {
+export default class UserService {
     constructor($resource, $q, $http, $timeout, MsgBus, Storage) {
-        super.info('Loaded');
-
-        super();
         this.$resource = $resource;
         this.$q = $q;
         this._loggedIn = false;

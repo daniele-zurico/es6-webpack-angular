@@ -1,14 +1,9 @@
-import EventListener from 'event-listener';
-
 /**
  * The global footer controller for the site.
  */
 /* @ngInject */
-export default class FooterController extends EventListener {
+export default class FooterController {
     constructor(User, toaster, $rootScope) {
-        super();
-        super.info('Loaded');
-
         this.user = User;
         this.toaster = toaster;
         this.$rootScope = $rootScope;

@@ -76,7 +76,6 @@ module.exports = function(grunt) {
                 mangle: false,
                 sourceMap: true,
                 sourceMapIn: 'target/js/bundle.js.map',
-                screwIE8: true,
                 compress: true,
                 preserveComments: false,
                 drop_console: true

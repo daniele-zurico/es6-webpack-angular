@@ -1,12 +1,9 @@
-import EventListener from 'event-listener';
-
 /**
  * Global header controller for the site.
  */
 /* @ngInject */
-export default class HeaderController extends EventListener {
+export default class HeaderController {
     constructor($state, $timeout, toaster, NavManager, User) {
-        super.info('Loaded');
         this.$state = $state;
         this.toaster = toaster;
         this.nav = NavManager;

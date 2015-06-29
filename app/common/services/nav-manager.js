@@ -1,5 +1,3 @@
-import EventListener from 'event-listener';
-
 /**
  * Represents a navigation state
  */
@@ -40,7 +38,7 @@ export class NavItem {
 /**
  * Provides utilities for managing navigation state and remembering parameters.
  */
-export default class NavManagerService extends EventListener {
+export default class NavManagerService {
     /**
      * Sets up default paramater values
      *
@@ -48,7 +46,6 @@ export default class NavManagerService extends EventListener {
      * @param {Storage} Storage
      */
     constructor($rootScope, Storage) {
-        super();
 
         /** @private **/
         this.storage = Storage;
