@@ -45,6 +45,7 @@
     overflow-x: scroll;
     box-shadow: rgba(255, 255, 255, 1) -1px 0 0 inset;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
 footer, .file-footer {
@@ -58,4 +59,9 @@ footer, .file-footer {
     padding-top: 30px;
     margin-top: 20px;
     padding-bottom: 10px;
+}
+
+.expandContract {
+    margin-right: 2px;
+    cursor: pointer;
 }

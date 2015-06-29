@@ -154,6 +154,10 @@ module.exports = function(grunt) {
             docs: {
                 cmd: 'esdoc -c esdoc.json',
                 stderr: false
+            },
+            copy: {
+                cmd: 'cp -R ./vendor/font-awesome-4.3.0/fonts ./target/docs/user',
+                stderr: false
             }
         }
     });
@@ -162,7 +166,7 @@ module.exports = function(grunt) {
     grunt.registerTask("default", ["parallel"]);
 
     // Docs
-    grunt.registerTask("docs", ["exec:docs"]);
+    grunt.registerTask("docs", ["exec:docs", "exec:copy"]);
 
     // Production build
     grunt.registerTask("build", ["clean", "karma:build", "webpack:build", "copy", "docs", "cssmin", "uglify"]);

@@ -2,6 +2,6 @@
   "source": "./app",
   "destination": "./target/docs",
   "autoPrivate": true,
-  "scripts": ["./vendor/doc-menu.js", "./bower_components/jquery/dist/jquery.min.js"],
-  "styles": ["./vendor/doc-style.css"]
+  "scripts": ["./vendor/doc-menu.js", "./bower_components/jquery/dist/jquery.min.js", "./vendor/jstorage.min.js"],
+  "styles": ["./vendor/doc-style.css", "./vendor/font-awesome-4.3.0/css/font-awesome.min.css"]
 }
