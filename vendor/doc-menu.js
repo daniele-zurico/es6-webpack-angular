@@ -62,7 +62,7 @@ window.onload = function() {
                 if(data[d].hasOwnProperty('path')) {
                     h += '<li data-ice="classDoc"><span><a href="' + data[d].path + '"> ' + d + '</a></span>';
                 } else {
-                    var state = 1;
+                    var state = 0;
 
                     if(cookieObj.hasOwnProperty(data[d].index))
                     {
