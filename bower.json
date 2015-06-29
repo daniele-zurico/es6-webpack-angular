@@ -24,7 +24,7 @@
     "ng-loader": "~0.0.1",
     "toaster": "~0.4.11",
     "ui-router-extras": "latest",
-    "angular-mocks": "~1.4.0",
+    "angular-mocks": "~1.4.0"
   },
   "devDependencies": {
     "api-check": "^6.0.10",

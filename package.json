@@ -69,7 +69,6 @@
     "less-loader": "^2.1.0",
     "matchdep": "^0.3.0",
     "phantomjs-polyfill": "0.0.1",
-    "phantomjs2": "^2.0.0",
     "pretty-hrtime": "^0.2.2",
     "raw-loader": "^0.5.1",
     "require-dir": "^0.1.0",
