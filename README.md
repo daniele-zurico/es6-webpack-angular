@@ -8,7 +8,8 @@ Run:
 
 - grunt
     - Starts up the built in server and the continuous test server for development.
-    - Open a browser and go to http://localhost:7358/public/#/
+    - For production open a browser and go to http://localhost:7358/public/#/
+    - For mocks open a browser and go to http://localhost:7359/public/#/
 Build:
 
 - grunt build

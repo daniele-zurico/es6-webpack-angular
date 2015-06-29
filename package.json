@@ -24,6 +24,7 @@
     "node": ">=0.10.25"
   },
   "devDependencies": {
+    "bower": "^1.4.1",
     "browser-sync": "^2.2.1",
     "component-resolver-webpack": "^0.3.0",
     "compression-webpack-plugin": "^0.2.0",
