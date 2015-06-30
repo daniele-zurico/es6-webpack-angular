@@ -1,4 +1,4 @@
-# portal-works prototype
+# Angular ES6 - Karma - Webpack Skeleton
 
 Install:
  - npm install
