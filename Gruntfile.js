@@ -99,6 +99,11 @@ module.exports = function(grunt) {
                     {cwd: 'public', expand: true, src: '**/*.html', dest: 'target/'},
                     {cwd: 'public/scripts', expand: true, src: '**/*.js', dest: 'target/scripts'}
                 ]
+            },
+            docs: {
+                files: [
+                    {cwd: 'vendor/font-awesome-4.3.0/fonts', expand: true, src: '**/*', dest: 'target/docs/user/fonts'}
+                ]
             }
         },
 
@@ -154,10 +159,6 @@ module.exports = function(grunt) {
             docs: {
                 cmd: 'esdoc -c esdoc.json',
                 stderr: false
-            },
-            copy: {
-                cmd: 'cp -R ./vendor/font-awesome-4.3.0/fonts ./target/docs/user',
-                stderr: false
             }
         }
     });
@@ -166,7 +167,7 @@ module.exports = function(grunt) {
     grunt.registerTask("default", ["parallel"]);
 
     // Docs
-    grunt.registerTask("docs", ["exec:docs", "exec:copy"]);
+    grunt.registerTask("docs", ["exec:docs", "copy:docs"]);
 
     // Production build
     grunt.registerTask("build", ["clean", "karma:build", "webpack:build", "copy", "docs", "cssmin", "uglify"]);

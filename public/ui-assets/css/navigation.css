@@ -33,14 +33,6 @@ footer {
     height: 50px;
 }
 
-.sb-header-align {
-    padding-top: 2px;
-}
-
-.sb-subnav-hide {
-    height: 0px;
-}
-
 .sk-footer {
     /*position: relative;*/
     min-height: 50px;
