@@ -1,0 +1,38 @@
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #80d4de;
+}
+
+.nav > li > a {
+  outline:none;
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+  outline: none;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555555;
+  background-color: #80d4de;
+}
+
+.btn-primary-blue {
+  color: #fff;
+  background-color: #569BBE;
+  border-color: #569BBE;
+}
+
+.btn-primary-blue:hover,
+.btn-primary-blue:focus,
+.btn-primary-blue:active,
+.btn-primary-blue.active,
+.open
+.dropdown-toggle
+.btn-primary-blue {
+  color: #fff;
+  background-color: #0067B1;
+  border-color: #0067B1;
+}

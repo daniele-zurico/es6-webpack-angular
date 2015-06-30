@@ -92,9 +92,9 @@ module.exports = function(grunt) {
                 files: [
                     // Skeleton uses require for HTML so no need to copy them, however uncomment this if you want to
                     //{cwd: 'app/modules', expand: true, src: '**/*.html', dest: 'target/modules/'},
-                    {cwd: 'public/ui-assets/fonts', expand: true, src: '**/*', dest: 'target/ui-assets/fonts'},
-                    {cwd: 'public/ui-assets/fonts', expand: true, src: '**/*', dest: 'target/fonts'},
-                    {cwd: 'public/ui-assets/css/bootstrap/fonts', expand: true, src: '**/*', dest: 'target/ui-assets/fonts'},
+                    {cwd: 'bower_components/font-awesome/fonts', expand: true, src: '**/*', dest: 'target/ui-assets/fonts'},
+                    {cwd: 'bower_components/font-awesome/fonts', expand: true, src: '**/*', dest: 'target/fonts'},
+                    {cwd: 'bower_components/bootstrap/fonts', expand: true, src: '**/*', dest: 'target/ui-assets/fonts'},
                     {cwd: 'public/ui-assets/img', expand: true, src: '**/*', dest: 'target/ui-assets/img'},
                     {cwd: 'public', expand: true, src: '**/*.html', dest: 'target/'},
                     {cwd: 'public/scripts', expand: true, src: '**/*.js', dest: 'target/scripts'}
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
             },
             docs: {
                 files: [
-                    {cwd: 'vendor/font-awesome-4.3.0/fonts', expand: true, src: '**/*', dest: 'target/docs/user/fonts'}
+                    {cwd: 'bower_components/font-awesome/fonts', expand: true, src: '**/*', dest: 'target/docs/user/fonts'}
                 ]
             }
         },
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    'target/ui-assets/css/main.css': [ 'public/ui-assets/css/main.css' ]
+                    'target/ui-assets/style/main.css': [ 'public/ui-assets/style/main.css' ]
                 }
             }
         },

@@ -81,10 +81,10 @@ module.exports = {
             nodeModulesPath,
             bowerComponentsPath,
             vendorPath,
-            __dirname + "/public/ui-assets/sass/"
+            __dirname + "/public/ui-assets/style/"
         ],
         alias: {
-            'style': __dirname + "/public/ui-assets/sass/main.scss",
+            'style': __dirname + "/public/ui-assets/style/main.scss",
             'directive': __dirname + "/app/common/globals/directive.js",
             'jquery': 'jquery/dist/jquery.js',
             'jQueryUi': 'jquery-ui/jquery-ui.min.js',

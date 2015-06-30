@@ -1,9 +1,9 @@
 <!-- login view -->
-<div class="main hbox login-background-overlay">
-    <div class="center-block">
-        <div class="sk-login" layout="column">
-            <div class="sk-login-logo"></div>
-            <label class="h2 sk-blue test">Login to your account</label>
+<div class="container-main container-hbox login-background-overlay">
+    <div class="container-center-block">
+        <div class="login-container" layout="column">
+            <div class="login-logo"></div>
+            <label class="h2 text-blue">Login to your account</label>
             <form name="userForm" ng-submit="doLogin(user)">
                 <div class="form-group">
                     <input type="text" class="form-control" id="username" ng-model="user.username" placeholder="User Name" required>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <div>
-                        <button type="submit" ng-disabled="userForm.$invalid" id="login-button" class="btn sk-btn-primary sk-float-right">LOGIN</button>
+                        <button type="submit" ng-disabled="userForm.$invalid" id="login-button" class="btn btn-primary-blue pull-right">LOGIN</button>
                     </div>
                 </div>
             </form>

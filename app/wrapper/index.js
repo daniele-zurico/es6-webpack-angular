@@ -6,6 +6,8 @@
  *
  * Handles authentication as well.
  */
+require('./tpl/footer.scss');
+require('./tpl/header.scss');
 import RouteConfig from './config/route-config';
 import PluginConfig from './config/plugin-config';
 import PluginRun from './config/plugin-run';

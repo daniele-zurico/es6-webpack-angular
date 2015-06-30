@@ -30,7 +30,8 @@
     "api-check": "^6.0.10",
     "css-loader": "latest",
     "jshint": "^2.6.3",
-    "nib": "^1.1.0"
+    "nib": "^1.1.0",
+    "font-awesome": "~4.3.0"
   },
   "resolutions": {
     "angular": "1.3.14",
