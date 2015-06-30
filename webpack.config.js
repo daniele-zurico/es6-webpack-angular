@@ -56,6 +56,7 @@ module.exports = {
             {test: /\.html$/, loader: 'raw', exclude: /node_modules|bower_components|vendor/},
             {test: /\.less$/, loader: "style!css!less"},
             {test: /\.css$/, loader: "style!css"},
+            {test: /\.scss$/, loader: "style!css!sass"},
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader?name=/res/[name].[ext]?[hash]'
@@ -79,9 +80,11 @@ module.exports = {
         root: [
             nodeModulesPath,
             bowerComponentsPath,
-            vendorPath
+            vendorPath,
+            __dirname + "/public/ui-assets/sass/"
         ],
         alias: {
+            'style': __dirname + "/public/ui-assets/sass/main.scss",
             'directive': __dirname + "/app/common/globals/directive.js",
             'jquery': 'jquery/dist/jquery.js',
             'jQueryUi': 'jquery-ui/jquery-ui.min.js',

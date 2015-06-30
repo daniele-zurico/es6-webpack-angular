@@ -1,9 +1,9 @@
 <!-- login view -->
-<div class="main hbox" style="background-color: rgba(86, 155, 190, 1); z-index: 9999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+<div class="main hbox login-background-overlay">
     <div class="center-block">
         <div class="sk-login" layout="column">
             <div class="sk-login-logo"></div>
-            <label class="h2 sk-blue">Login to your account</label>
+            <label class="h2 sk-blue test">Login to your account</label>
             <form name="userForm" ng-submit="doLogin(user)">
                 <div class="form-group">
                     <input type="text" class="form-control" id="username" ng-model="user.username" placeholder="User Name" required>

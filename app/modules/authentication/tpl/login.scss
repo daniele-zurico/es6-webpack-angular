@@ -1,0 +1,5 @@
+@import '~main.scss';
+.login-background-overlay{
+  @extend .container-background-overlay;
+  background-color: rgba(86, 155, 190, 1);
+}

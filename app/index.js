@@ -3,7 +3,6 @@
  *
  * The main entry point for the app.
  */
-
 const angular = require('angular');
 
 import Bootstrap from './common/globals/bootstrap';

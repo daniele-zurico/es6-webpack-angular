@@ -9,6 +9,7 @@
  * time when unit testing, it also makes the module
  * fully independent and reusable.
  */
+require('./tpl/login.scss');
 
 import LoginBoxDirective from './directives/login-box';
 

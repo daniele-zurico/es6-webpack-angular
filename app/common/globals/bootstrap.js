@@ -6,6 +6,8 @@
  * @author Wael Jammal
  * @access public
  */
+require('style');
+
 export default class Bootstrap {
     /**
      * Initializes the dependencies array
