@@ -38,8 +38,8 @@ export default class RouteConfig {
                 // Preload's content for the / part of the navigation route, also enforces authentication.
                 preLoad: function(NavManager) {
                     // Setup your navigation paths here.
-                    NavManager.registerMain('TOP LEVEL MENU', 'top.dashboard', 'top')
-                        .sub('SUB LEVEL MENU', 'top.dashboard', 'top');
+                    NavManager.registerMain('Dashboard', 'top.dashboard', 'top')
+                        .sub('Module 1', 'top.dashboard', 'top');
                 }
             }
         });

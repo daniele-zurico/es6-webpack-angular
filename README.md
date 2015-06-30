@@ -3,7 +3,7 @@
 An Angular ES6 boiler plate project to get you started. Write Directives/Controllers and Services using classes. Test your code using Jasmine, generate documentation using
 ES6 Docs view test coverage and more.
 
-The project using a modular architecture where you build re-usable modules and glue them together in a container.
+The project uses a modular architecture where you build re-usable modules and glue them together in a container.
 
 Install:
  - npm install
@@ -15,6 +15,7 @@ Run:
     - Starts up the built in server and the continuous test server for development.
     - For production open a browser and go to http://localhost:7358/public/#/
     - For mocks open a browser and go to http://localhost:7359/public/#/
+    
 Build:
 
 - grunt build
