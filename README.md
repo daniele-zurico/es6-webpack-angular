@@ -1,7 +1,7 @@
 # Angular ES6 - Karma - Webpack Skeleton
 
 An Angular ES6 boiler plate project to get you started. Write Directives/Controllers and Services using classes. Test your code using Jasmine, generate documentation using
-ES6 Docs view test coverage and more.
+ES6 Docs, write your style with sass, view test coverage and more.
 
 The project uses a modular architecture where you build re-usable modules and glue them together in a container.
 
